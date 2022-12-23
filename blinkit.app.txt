@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./blinkit.css">
+</head>
+<body>
+
+
+    <script src="./blinkit.js">
+        
+    </script>
+</body>
+</html>
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>CSS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.head
+{
+    height: 100px;
+    
+    display: flex;
+    justify-content: space-around;
+align-items: center;
+    
+    
+}
+.image img
+{
+    height: 90px;
+    width: 200px;
+}
+.top
+{
+    font-size: large;
+    font-weight: bolder;
+}
+.inpu{
+    position: relative;
+}
+.inpu input
+{
+height: 55px;
+width: 450px;
+border-radius: 20px;
+/* border: none; */
+padding-left: 40px;
+font-size: larger;
+}
+.search
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+font-size: x-large;
+
+
+}
+.cart
+{
+    display: flex;
+    height: 50px;
+    width: 130px;
+    background-color: green;
+    color: white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart i{
+    font-size: x-large;
+}
+.cart p{
+    font-weight: bolder;
+}
+.subimage img{
+    width: 100%;
+}
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>js>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+let nav = document.createElement("div")
+nav.className = "head"
+let a1 = document.createElement("div")
+a1.className = "image"
+a1.innerHTML = `<img src="./blinkit.jpg" alt="">`
+
+let a2 = document.createElement("div")
+let a21 = document.createElement("p")
+a21.className = "top"
+a21.innerText = "Temporarily closed"
+
+let a22 = document.createElement("p")
+a22.className = "bel"
+a22.innerText = "Bengaluru,karnataka,India"
+
+let a3 = document.createElement("div")
+a3.className = "inpu"
+a3.innerHTML = `<input type="text" placeholder="search for the items" >`
+
+let a31 = document.createElement("div")
+a31.className = "search"
+a31.innerHTML = `<i class="fa fa-search" aria-hidden="true"></i>`
+
+let a4 = document.createElement("div")
+let a41 = document.createElement("p")
+a41.innerHTML = `LOGIN`
+
+let a5 = document.createElement("div")
+a5.className = "cart"
+a5.innerHTML = ` <i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp&nbsp
+<p>MyCart</p>`
+
+let down = document.createElement("div")
+down.className = "subimage"
+down.innerHTML = `<img src="https://d168jcr2cillca.cloudfront.net/uploadimages/coupons/14851-Blinkit-Offers-Coupons-1.jpg" alt="">`
+
+
+let body = document.body
+body.prepend(down)
+body.prepend(nav)
+nav.append(a1)
+
+nav.append(a2)
+a2.append(a21)
+a2.append(a22)
+
+nav.append(a3)
+a3.append(a31)
+
+nav.append(a4)
+a4.append(a41)
+
+nav.append(a5)
+
+
+
